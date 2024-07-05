@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import NewPost from "./pages/NewPost";
 import EditPost from "./pages/EditPost";
-import Footer from "./components/Footer";
 import { PostProvider } from "./contexts/PostContext";
 
 const App = () => {
@@ -18,7 +17,6 @@ const App = () => {
           </Routes>
         </div>
       </Router>
-      <Footer />
     </PostProvider>
   );
 };
