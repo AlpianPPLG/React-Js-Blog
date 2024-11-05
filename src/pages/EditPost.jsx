@@ -19,6 +19,10 @@ const EditPost = () => {
     navigate("/");
   };
 
+  const handleCancel = () => {
+    navigate("/"); // Navigate back to the main page
+  };
+
   if (!post) {
     return <div>Post not found</div>;
   }
@@ -56,12 +60,21 @@ const EditPost = () => {
             required
           />
         </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded"
-        >
-          Update
-        </button>
+        <div className="flex justify-between">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white py-2 px-4 rounded"
+          >
+            Update
+          </button>
+          <button
+            type="button"
+            onClick={handleCancel}
+            className="bg-gray-300 text-gray-700 py-2 px-4 rounded"
+          >
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );
